@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Button</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<link rel="icon" type="image/x-icon" href="img/favicon.png" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style type="text/css">
+	.form-email{
+		position: absolute;
+		left: 0;
+		width:70% !important;
+		padding-right: 25% !important;
+	}
+	.form-email::-moz-placeholder {
+		font-size: 16px;
+	}
+	.form-email:-ms-input-placeholder {
+		font-size: 16px;
+	}
+	.form-email::-webkit-input-placeholder {
+		font-size: 16px;
+	}
+	.form-btn{
+		position: absolute;
+		margin-bottom: 15px;
+		padding: 11px;
+		width: 25%;
+		border-radius: 50px;
+		right: 30%;;
+		cursor: pointer;
+		border:none;
+		color: #ffffff;
+		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+		background-color: #901a1e;
+	}
+	.form-email{
+		position: absolute;
+		left: 0;
+		width:70% !important;
+		padding-right: 25% !important;
+	}
+	.form-email::-moz-placeholder {
+		font-size: 16px;
+	}
+	.form-email:-ms-input-placeholder {
+		font-size: 16px;
+	}
+	.form-email::-webkit-input-placeholder {
+		font-size: 16px;
+	}
+	input[type=text]{
+		border: 1px solid #f3f3f3;
+		color: #000000;
+		background-color: #ffffff;
+		width: 100%;
+		border-radius: 50px;
+		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.09);
+		margin-bottom: 15px;
+		padding: 10px;
+	}
+	input[type=text]:focus{
+		border-color: #0c68ff;
+		color: #000000;
+	}
+	.p-t-40{
+		padding-top: 40px;
+	}
+	.field-error{
+		border: 1px solid red !important;
+	}
+	h2{
+		color: #901a1e;
+		font-weight: 600;
+		margin-top: 100px;
+		margin-bottom: 20px;
+	}
+</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<p class="p-t-40">Submit <b>Valid</b> the form to check the <b>Success</b> Message</p>
+				<p class="">Submit <b>Blank</b> form to check the <b>Error</b> Message</p>
+				<h2>Subscribe Newsletter !!</h2>
+				<form class="form-email-js">
+					<input class="form-email validate-email" type="text" id="email" name="email" placeholder="Enter Email Address">
+					<div class="form-btn text-center">Subscribe</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+
+<script type="text/javascript">
+	$(".form-btn").click(function(){
+		$("form").find('.validate-email').each(function() {
+			if (!(/(.+)@(.+){2,}\.(.+){2,}/.test($(this).val()))) {
+				$(this).addClass('field-error');
+				$(".form-btn").animate({
+					width: "70%"
+				},1000).text("Please enter valid Email Address");
+				setTimeout(function() {
+					$(".form-btn").animate({
+						width: "25%"
+					},1000);
+					setTimeout(function() {
+						$(".form-btn").text("Subscribe").fadeIn(1000);
+					},1000);
+				}, 2000);
+			} else {
+				$(this).removeClass('field-error');
+				$(".form-btn").animate({
+					width: "70%",
+				},1000).text("Successfully Submitted").css("background","#008000");
+				setTimeout(function() {
+					$('.form-email').val('');
+					$(".form-btn").animate({
+						width: "25%",
+					},1000);
+					setTimeout(function() {
+						$(".form-btn").text("Submit").css("background","#901a1e");
+					},1000);
+				}, 2000);
+			}
+		});
+	})
+
+
+
+</script>
+</html>
+
