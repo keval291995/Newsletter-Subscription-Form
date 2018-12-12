@@ -1,4 +1,10 @@
 # Newsletter-Subscription-Form
 Newsletter Subscription Form
 
-semi-circled designed newsletter form for your website.
+Email Subscribers & Newsletters Source Code [ Build in HTML, Jquery & CSS ]
+
+How To Use/Run This Code :-
+ > One file that has all the source codes.
+
+Preview :-
+
