@@ -1,10 +1,7 @@
 # Newsletter-Subscription-Form
-Newsletter Subscription Form
 
-Email Subscribers & Newsletters Source Code [ Build in HTML, Jquery & CSS ]
+Newsletter Subscription Form Source Code [ Build in HTML, Jquery & CSS ]
 
 How To Use/Run This Code :-
- > One file that has all the source codes.
-
-Preview :-
-
+ > Download the file and extract.
+ > Use the button.html file.
